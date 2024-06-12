@@ -1,0 +1,9 @@
+# ninja log v5
+1	513	7399047275184401	schlichting_texteditor_autogen/timestamp	8d4bfea8e41b3976
+1	513	7399047275184401	schlichting_texteditor_autogen/mocs_compilation.cpp	8d4bfea8e41b3976
+1	513	7399047275184401	D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/schlichting_texteditor_autogen/timestamp	8d4bfea8e41b3976
+1	513	7399047275184401	D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/schlichting_texteditor_autogen/mocs_compilation.cpp	8d4bfea8e41b3976
+519	2358	7399047294127850	CMakeFiles/schlichting_texteditor.dir/mainwindow.cpp.obj	f5812dc92e10946c
+513	2460	7399047295142777	CMakeFiles/schlichting_texteditor.dir/schlichting_texteditor_autogen/mocs_compilation.cpp.obj	c25cebe9889725a1
+516	2489	7399047295432077	CMakeFiles/schlichting_texteditor.dir/main.cpp.obj	d714ed823ebf3799
+2489	2786	7399047298375334	schlichting_texteditor.exe	25ef54c9e0ff8d68

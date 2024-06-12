@@ -1,0 +1,9 @@
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/schlichting_texteditor.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/schlichting_texteditor_autogen_timestamp_deps.dir
+D:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/CMakeFiles/schlichting_texteditor_autogen.dir
