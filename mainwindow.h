@@ -15,6 +15,7 @@ class MainWindow : public QMainWindow {
         QTextEdit *textEdit;
         void saveFile();
         void createMenus();
+        void saveAndExit();
 };
 
 #endif // MAINWINDOW_H
