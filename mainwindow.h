@@ -11,13 +11,21 @@ class MainWindow : public QMainWindow {
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow() = default;
 
-    private:
-        QTextEdit *textEdit;
-        void createMenus();
+    public slots:
+        void newFile();
         void saveAsFile();
         void saveFile();
         void exitFile();
-        // void openFile();
+        void openFile();
+        void textModified();
+
+    private:
+        QTextEdit *textEdit;
+        void createMenus();
+        bool askForSave();
+        bool modified;
+        void setupConnections();
+        void setModified(bool value);
         // highlight Text
         // WordCounter
 };
