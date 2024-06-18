@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <QTextEdit>
+#include <stack>
+#include <QLabel>
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -18,14 +20,23 @@ class MainWindow : public QMainWindow {
         void exitFile();
         void openFile();
         void textModified();
+        void undo();
+        void cut();
+        void copy();
+        void paste();
+        void deleteText();
 
     private:
-        QTextEdit *textEdit;
         void createMenus();
         bool askForSave();
         bool modified;
         void setupConnections();
         void setModified(bool value);
+        void updateCharCount();
+
+        QTextEdit *textEdit;
+        std::stack<QString> undoStack;
+        QLabel *charCountLabel;
         // highlight Text
         // WordCounter
 };
