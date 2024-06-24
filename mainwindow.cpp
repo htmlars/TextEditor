@@ -13,6 +13,8 @@
 #include <QClipboard>
 #include <QKeySequence>
 #include <QStatusBar>
+#include <QStyleFactory>
+#include <QActionGroup>
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), textEdit(new QTextEdit(this)), modified(false), charCountLabel(new QLabel(this)) {
     setCentralWidget(textEdit);
@@ -24,6 +26,10 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), textEdit(new QText
     createMenus();
     setupConnections();
     updateCharCount();
+
+    resize(800, 600);
+
+    toggleDarkMode(false);
 }
 
 void MainWindow::setupConnections() {
@@ -49,6 +55,7 @@ void MainWindow::createMenus() {
     QMenuBar *bar = menuBar(); // creates a navbar / menu
     QMenu *fileMenu = bar->addMenu(tr("&Datei")); // adds a file to the menu
     QMenu *editMenu = bar->addMenu(tr("&Bearbeiten"));
+    QMenu *viewMenu = bar->addMenu(tr("&Ansicht"));
 
     QAction *newAction = new QAction(tr("Neues Fenster"), this); // Dropdown option to create a new text file
     connect(newAction, &QAction::triggered, this, &MainWindow::newFile); // connects the event action to the newFile method
@@ -94,6 +101,29 @@ void MainWindow::createMenus() {
     deleteAction->setShortcut(QKeySequence::Delete);
     connect(deleteAction, &QAction::triggered, this, &MainWindow::deleteText);
     editMenu->addAction(deleteAction);
+
+    QActionGroup *backgroundGroup = new QActionGroup(this); // groups qactions so only one can be active at a time
+
+    QAction *lightAction = new QAction(tr("Hell"), this);
+    QAction *darkAction = new QAction(tr("Dunkel"), this);
+
+    lightAction->setCheckable(true);
+    lightAction->setChecked(true); // start with light mode checked
+    darkAction->setCheckable(true);
+
+    connect(lightAction, &QAction::triggered, this, [this]() {
+        toggleDarkMode(false);
+    });
+    connect(darkAction, &QAction::triggered, this, [this]() {
+        toggleDarkMode(true);
+    });
+
+    backgroundGroup->addAction(lightAction);
+    backgroundGroup->addAction(darkAction);
+
+    QMenu *backgroundMenu = viewMenu->addMenu(tr("Hintergrund"));
+    backgroundMenu->addAction(lightAction);
+    backgroundMenu->addAction(darkAction);
 }
 
 void MainWindow::newFile() {
@@ -226,5 +256,47 @@ void MainWindow::paste() {
 void MainWindow::deleteText() {
     textEdit->textCursor().removeSelectedText();
     updateCharCount();
+}
+
+void MainWindow::toggleDarkMode(bool dark) // https://stackoverflow.com/questions/15035767/is-the-qt-5-dark-fusion-theme-available-for-windows
+{
+    if (dark)
+    {
+        qApp->setStyle(QStyleFactory::create("Fusion"));
+        QPalette darkPalette;
+        darkPalette.setColor(QPalette::Window, QColor(53, 53, 53));
+        darkPalette.setColor(QPalette::WindowText, Qt::white);
+        darkPalette.setColor(QPalette::Base, QColor(25, 25, 25));
+        darkPalette.setColor(QPalette::AlternateBase, QColor(53, 53, 53));
+        darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
+        darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+        darkPalette.setColor(QPalette::Text, Qt::white);
+        darkPalette.setColor(QPalette::Button, QColor(53, 53, 53));
+        darkPalette.setColor(QPalette::ButtonText, Qt::white);
+        darkPalette.setColor(QPalette::BrightText, Qt::red);
+        darkPalette.setColor(QPalette::Link, QColor(42, 130, 218));
+        darkPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+        darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+        qApp->setPalette(darkPalette);
+    }
+    else
+    {
+        qApp->setStyle(QStyleFactory::create("Fusion"));
+        QPalette lightPalette;
+        lightPalette.setColor(QPalette::Window, Qt::white);
+        lightPalette.setColor(QPalette::WindowText, Qt::black);
+        lightPalette.setColor(QPalette::Base, Qt::white);
+        lightPalette.setColor(QPalette::AlternateBase, Qt::white);
+        lightPalette.setColor(QPalette::ToolTipBase, Qt::white);
+        lightPalette.setColor(QPalette::ToolTipText, Qt::black);
+        lightPalette.setColor(QPalette::Text, Qt::black);
+        lightPalette.setColor(QPalette::Button, Qt::white);
+        lightPalette.setColor(QPalette::ButtonText, Qt::black);
+        lightPalette.setColor(QPalette::BrightText, Qt::red);
+        lightPalette.setColor(QPalette::Link, QColor(42, 130, 218));
+        lightPalette.setColor(QPalette::Highlight, QColor(42, 130, 218));
+        lightPalette.setColor(QPalette::HighlightedText, Qt::white);
+        qApp->setPalette(lightPalette);
+    }
 }
 

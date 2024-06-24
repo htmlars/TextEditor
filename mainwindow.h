@@ -25,6 +25,7 @@ class MainWindow : public QMainWindow {
         void copy();
         void paste();
         void deleteText();
+        void toggleDarkMode(bool dark);
 
     private:
         void createMenus();

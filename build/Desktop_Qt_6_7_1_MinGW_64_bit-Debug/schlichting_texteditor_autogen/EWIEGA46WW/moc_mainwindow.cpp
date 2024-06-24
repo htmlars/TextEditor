@@ -48,7 +48,9 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "cut",
     "copy",
     "paste",
-    "deleteText"
+    "deleteText",
+    "toggleDarkMode",
+    "dark"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -61,7 +63,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      11,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -69,17 +71,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   80,    2, 0x0a,    1 /* Public */,
-       3,    0,   81,    2, 0x0a,    2 /* Public */,
-       4,    0,   82,    2, 0x0a,    3 /* Public */,
-       5,    0,   83,    2, 0x0a,    4 /* Public */,
-       6,    0,   84,    2, 0x0a,    5 /* Public */,
-       7,    0,   85,    2, 0x0a,    6 /* Public */,
-       8,    0,   86,    2, 0x0a,    7 /* Public */,
-       9,    0,   87,    2, 0x0a,    8 /* Public */,
-      10,    0,   88,    2, 0x0a,    9 /* Public */,
-      11,    0,   89,    2, 0x0a,   10 /* Public */,
-      12,    0,   90,    2, 0x0a,   11 /* Public */,
+       1,    0,   86,    2, 0x0a,    1 /* Public */,
+       3,    0,   87,    2, 0x0a,    2 /* Public */,
+       4,    0,   88,    2, 0x0a,    3 /* Public */,
+       5,    0,   89,    2, 0x0a,    4 /* Public */,
+       6,    0,   90,    2, 0x0a,    5 /* Public */,
+       7,    0,   91,    2, 0x0a,    6 /* Public */,
+       8,    0,   92,    2, 0x0a,    7 /* Public */,
+       9,    0,   93,    2, 0x0a,    8 /* Public */,
+      10,    0,   94,    2, 0x0a,    9 /* Public */,
+      11,    0,   95,    2, 0x0a,   10 /* Public */,
+      12,    0,   96,    2, 0x0a,   11 /* Public */,
+      13,    1,   97,    2, 0x0a,   12 /* Public */,
 
  // slots: parameters
     QMetaType::Void,
@@ -93,6 +96,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   14,
 
        0        // eod
 };
@@ -127,7 +131,10 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'paste'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'deleteText'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'toggleDarkMode'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>
     >,
     nullptr
 } };
@@ -149,10 +156,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 8: _t->copy(); break;
         case 9: _t->paste(); break;
         case 10: _t->deleteText(); break;
+        case 11: _t->toggleDarkMode((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const
@@ -174,13 +181,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 12;
     }
     return _id;
 }
