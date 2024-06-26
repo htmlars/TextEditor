@@ -255,9 +255,9 @@
 	"HEADERS" : 
 	[
 		[
-			"D:/Semester_2_Projekte/C++/schlichting_texteditor/mainwindow.h",
+			"D:/Semester_2_Projekte/C++/schlichting_texteditor/texteditor.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"EWIEGA46WW/moc_texteditor.cpp",
 			null
 		]
 	],
@@ -338,7 +338,7 @@
 			null
 		],
 		[
-			"D:/Semester_2_Projekte/C++/schlichting_texteditor/mainwindow.cpp",
+			"D:/Semester_2_Projekte/C++/schlichting_texteditor/texteditor.cpp",
 			"MU",
 			null
 		]

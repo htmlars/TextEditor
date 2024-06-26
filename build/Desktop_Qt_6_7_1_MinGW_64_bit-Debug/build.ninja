@@ -65,9 +65,9 @@ build CMakeFiles/schlichting_texteditor.dir/main.cpp.obj: CXX_COMPILER__schlicht
   OBJECT_DIR = CMakeFiles\schlichting_texteditor.dir
   OBJECT_FILE_DIR = CMakeFiles\schlichting_texteditor.dir
 
-build CMakeFiles/schlichting_texteditor.dir/mainwindow.cpp.obj: CXX_COMPILER__schlichting_texteditor_unscanned_Debug D$:/Semester_2_Projekte/C++/schlichting_texteditor/mainwindow.cpp || cmake_object_order_depends_target_schlichting_texteditor
+build CMakeFiles/schlichting_texteditor.dir/texteditor.cpp.obj: CXX_COMPILER__schlichting_texteditor_unscanned_Debug D$:/Semester_2_Projekte/C++/schlichting_texteditor/texteditor.cpp || cmake_object_order_depends_target_schlichting_texteditor
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\schlichting_texteditor.dir\mainwindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\schlichting_texteditor.dir\texteditor.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -ID:/Semester_2_Projekte/C++/schlichting_texteditor/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/schlichting_texteditor_autogen/include -isystem C:/Qt/6.7.1/mingw_64/include/QtCore -isystem C:/Qt/6.7.1/mingw_64/include -isystem C:/Qt/6.7.1/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.1/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.1/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\schlichting_texteditor.dir
@@ -81,7 +81,7 @@ build CMakeFiles/schlichting_texteditor.dir/mainwindow.cpp.obj: CXX_COMPILER__sc
 #############################################
 # Link the executable schlichting_texteditor.exe
 
-build schlichting_texteditor.exe: CXX_EXECUTABLE_LINKER__schlichting_texteditor_Debug CMakeFiles/schlichting_texteditor.dir/schlichting_texteditor_autogen/mocs_compilation.cpp.obj CMakeFiles/schlichting_texteditor.dir/main.cpp.obj CMakeFiles/schlichting_texteditor.dir/mainwindow.cpp.obj | C$:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.1/mingw_64/lib/libQt6EntryPoint.a || schlichting_texteditor_autogen schlichting_texteditor_autogen_timestamp_deps
+build schlichting_texteditor.exe: CXX_EXECUTABLE_LINKER__schlichting_texteditor_Debug CMakeFiles/schlichting_texteditor.dir/schlichting_texteditor_autogen/mocs_compilation.cpp.obj CMakeFiles/schlichting_texteditor.dir/main.cpp.obj CMakeFiles/schlichting_texteditor.dir/texteditor.cpp.obj | C$:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.1/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.1/mingw_64/lib/libQt6EntryPoint.a || schlichting_texteditor_autogen schlichting_texteditor_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.1/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.1/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -168,7 +168,7 @@ build schlichting_texteditor_autogen_timestamp_deps: phony CMakeFiles/schlichtin
 #############################################
 # Utility command for schlichting_texteditor_autogen
 
-build schlichting_texteditor_autogen: phony CMakeFiles/schlichting_texteditor_autogen schlichting_texteditor_autogen/include/ui_mainwindow.h schlichting_texteditor_autogen/timestamp schlichting_texteditor_autogen/mocs_compilation.cpp schlichting_texteditor_autogen_timestamp_deps
+build schlichting_texteditor_autogen: phony CMakeFiles/schlichting_texteditor_autogen schlichting_texteditor_autogen/include/ui_texteditor.h schlichting_texteditor_autogen/timestamp schlichting_texteditor_autogen/mocs_compilation.cpp schlichting_texteditor_autogen_timestamp_deps
 
 
 #############################################
@@ -190,7 +190,7 @@ build CMakeFiles/schlichting_texteditor_autogen_timestamp_deps | ${cmake_ninja_w
 #############################################
 # Phony custom command for CMakeFiles\schlichting_texteditor_autogen
 
-build CMakeFiles/schlichting_texteditor_autogen schlichting_texteditor_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/schlichting_texteditor_autogen ${cmake_ninja_workdir}schlichting_texteditor_autogen/include/ui_mainwindow.h: phony schlichting_texteditor_autogen/timestamp || schlichting_texteditor_autogen_timestamp_deps
+build CMakeFiles/schlichting_texteditor_autogen schlichting_texteditor_autogen/include/ui_texteditor.h | ${cmake_ninja_workdir}CMakeFiles/schlichting_texteditor_autogen ${cmake_ninja_workdir}schlichting_texteditor_autogen/include/ui_texteditor.h: phony schlichting_texteditor_autogen/timestamp || schlichting_texteditor_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

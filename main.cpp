@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "texteditor.h"
 
 #include <QApplication>
 
@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    TextEditor t;
+    t.show();
     return a.exec();
 }
